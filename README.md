@@ -3,4 +3,4 @@
 10second.build Docker start stage
 ---------------------------------
 
-This will parse the GitHub Webhook JSON and then checkout the exact version into /data/10second.build
+This will parse the GitHub Webhook JSON and then checkout the exact version into /data/10second.build/github-checkout
