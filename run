@@ -5,5 +5,5 @@ SHA1=${DATA[0]}
 REPO=${DATA[1]}
 
 git -c http.sslVerify=false clone ${REPO} .
-git checkout ${SHA1}
+git checkout -q ${SHA1}
 
