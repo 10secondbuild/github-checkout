@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
+set -e
 
 read -a DATA <<< `jq -r '.after, .repository.clone_url'`
 SHA1=${DATA[0]}
