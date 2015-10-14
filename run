@@ -1,8 +1,9 @@
 #!/usr/bin/env bash
 
-repo=$1
-cmd=$2
+read -a DATA <<< `jq -r '.after, .repository.clone_url'`
+SHA1=${DATA[0]}
+REPO=${DATA[1]}
 
-git -c http.sslVerify=false clone ${repo}
-cd `ls -d */`
-${cmd}
+git -c http.sslVerify=false clone ${REPO} .
+git checkout ${SHA1}
+
