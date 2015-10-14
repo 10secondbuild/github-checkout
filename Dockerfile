@@ -5,8 +5,8 @@ RUN apt-get update -qq \
 	curl jq git \
 	--no-install-recommends
 
-VOLUME /data/10second.build/github-checkout/
-WORKDIR /data/10second.build/github-checkout/
+VOLUME /data/10second.build/checkout/
+WORKDIR /data/10second.build/checkout/
 
 COPY run /opt/10second.build/github-checkout/
 RUN chmod u+x /opt/10second.build/github-checkout/run
