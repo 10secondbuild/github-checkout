@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+
+repo=$1
+cmd=$2
+
+git -c http.sslVerify=false clone ${repo}
+cd `ls -d */`
+${cmd}
