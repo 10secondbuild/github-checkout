@@ -5,6 +5,8 @@ read -a DATA <<< `jq -r '.after, .repository.clone_url'`
 SHA1=${DATA[0]}
 REPO=${DATA[1]}
 
+echo Repository: ${REPO}
 git -c http.sslVerify=false clone ${REPO} .
+echo Checking out SHA1: ${SHA1}
 git checkout -q ${SHA1}
 
